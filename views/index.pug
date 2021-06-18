@@ -1,0 +1,14 @@
+head 
+    title="Mclaren Library"
+    link(rel="stylesheet" href="styles.css")
+body 
+    h1=message
+    p=text
+    a(href="addbook")
+        button(type="button") Add New Book
+    div 
+        each book in bookList 
+            p(class="book-data")=book.title + " | " +book.category.name +" | "+ book.author
+
+   
+

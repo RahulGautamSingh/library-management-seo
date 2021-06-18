@@ -1,0 +1,30 @@
+head 
+    title="Mclaren Library"
+    link(rel="stylesheet" href="styles.css")
+body 
+div(class="form")
+    h1(class="addbooktitle")="Add New Book"
+    form(action="/books" method="POST") 
+        label(for="bookname") Book Name: 
+        input(
+        type='text'
+        name='bookname'
+        )
+        br
+        label(for="author") Author Name: 
+        input(
+        type='text'
+        name='author'
+        )
+        br
+        label(for="selector") Category:
+        select(name="selector")
+            each category in categories
+                option(value=category.name) #{category.name}
+        br
+        label(for="price") Price: 
+        input(
+        type='text'
+        name='price'
+        )
+        button(type="submit") Submit
